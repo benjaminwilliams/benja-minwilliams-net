@@ -195,7 +195,7 @@ workspace 1 output HDMI-A-0
 workspace 2 output HDMI-A-0
 
 bindsym $mod+r mode "resize"
-exec --no-startup-id feh --bg-scale ~/Downloads/salty_mountains.png
+exec --no-startup-id feh --bg-scale ~/Pictures/arch-rainbow-1920x1080.png
 
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id /usr/lib/kdeconnectd
@@ -207,7 +207,7 @@ exec --no-startup-id /usr/lib/kdeconnectd
 #        position top
 # }
 for_window [class=".*"] border pixel 0
-gaps inner 10
+gaps inner 5
 smart_borders on
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
