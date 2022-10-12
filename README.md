@@ -5,7 +5,7 @@
 - Install Arch with i3-gaps
 - Install some basics
 ````
-sudo pacman -S kitty vim rofi polybar btop fish
+sudo pacman -S kitty vim rofi polybar btop fish firefox
 ````
 - pull down this repo using a bare repo 
  ````
@@ -29,3 +29,4 @@ cd yay-bin
 makepkg -si
 ````
 - LunarVim - https://www.lunarvim.org/docs/installation
+- fonts - `yay nerd-fonts-dejavu-complete`
