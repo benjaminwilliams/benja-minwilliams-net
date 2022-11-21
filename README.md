@@ -2,10 +2,10 @@
 
 ### Clean install guide
 
-- Install Arch with i3-gaps
+- Install Arch with Gnome
 - Install some basics
 ````
-sudo pacman -S kitty vim rofi polybar btop fish firefox
+sudo pacman -S kitty vim btop fish firefox
 ````
 - pull down this repo using a bare repo 
  ````
@@ -29,4 +29,10 @@ cd yay-bin
 makepkg -si
 ````
 - LunarVim - https://www.lunarvim.org/docs/installation
-- fonts - `yay nerd-fonts-dejavu-complete`
+- fonts - `yay -S nerd-fonts-dejavu-complete`
+
+- Fish
+````
+sudo pacman -S fish
+sudo chsh -s /bin/fish
+`````
