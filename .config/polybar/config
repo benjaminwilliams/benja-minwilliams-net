@@ -15,115 +15,69 @@
 ;   The README contains a lot of information
 ;
 ;==========================================================
-
-; Nord
-[colorsNord]
-red = #cc241d
-green = #b8bb26
-yellow = #fabd2f
-blue = #458588
-purple = #b16286
-aqua = #8ec07c
-gray = #7c6f64
-orange = #d65d0e
-bg0 = #282828
-bg1 = #3c3836
-bg2 = #504945
-bg3 = #665c54
-bg4 = #7c6f64
-fg1 = #ebdbb2
-background-alt = #32302f
-foreground-alt = #d5c4a1
-primary = #83a598
-secondary = #fabd2f
-alert = #fb4934
-
-background = #1a1b26
-background2 = #414868
-foreground = #a9b1d6
-
-; 
-[colorsgruv]
-red = #cc241d
-green = #b8bb26
-yellow = #fabd2f
-blue = #458588
-purple = #b16286
-aqua = #8ec07c
-gray = #7c6f64
-orange = #d65d0e
-bg0 = #282828
-bg1 = #3c3836
-bg2 = #504945
-bg3 = #665c54
-bg4 = #7c6f64
-fg1 = #ebdbb2
-background-alt = #32302f
-foreground-alt = #d5c4a1
-primary = #83a598
-secondary = #fabd2f
-alert = #fb4934
-bg = #3c3836
-
-background = #3c3836
-bgt = #3c3836
-background2 = #414868
-foreground = #ebdbb2
-
 ; frappe
 [colors]
-red = #e78284
+base = #303446
+mantle = #292c3c
+crust = #232634
+
+text = #c6d0f5
+subtext0 = #a5adce
+subtext1 = #b5bfe2
+
+surface0 = #414559
+surface1 = #51576d
+surface2 = #626880
+
+overlay0 = #737994
+overlay1 = #838ba7
+overlay2 = #949cbb
+
+
+blue = #8caaee
+lavender = #babbf1
+sapphire = #85c1dc
+sky = #99d1db
+teal = #81c8be
 green = #a6d189
 yellow = #e5c890
-blue = #8caaee
-purple = #babbf1
-aqua = #81c8be
-gray = #7c6f64
-orange = #ef9f76
-bg0 = #282828
-bg1 = #3c3836
-bg2 = #504945
-bg3 = #665c54
-bg4 = #7c6f64
-fg1 = #ebdbb2
-background-alt = #32302f
-foreground-alt = #d5c4a1
-primary = #83a598
-secondary = #fabd2f
-alert = #fb4934
-bg = #303446
+peach = #ef9f76
+maroon = #ea999c
+red = #e78284
+mauve = #ca9ee6
+pink = #f4b8e4
+flamingo = #eebebe
+rosewater = #f2d5cf
 
-background = #303446
-bgt = #303446
-background2 = #292c3c
-foreground = #c6d0f5
+transparent = #FF00000
+backgroundT = #88303446
 
 [bar/example]
 monitor = ${env:MONITOR:}
 width = 100%
 height = 30
-margin-left = 10
 fixed-center = true
-background = ${colors.bgt}
-foreground = ${colors.foreground}
-padding-left = 0
-padding-right = 0
+background = #000000
+foreground = #ffffff
+border-size = 0
+padding-left = 1
+padding-right = 2
 module-margin-left = 0
 module-margin-right = 0
-;font-0 = "Inconsolata for Powerline:pixelsize=15:antialias=true;3"
-font-0 = "DejaVuSansMono Nerd Font Mono:size:13:antialias=true;3"
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = "fontAwesome:style=Regular:size=11:antialias=truee;2"
+line-size = 3
+radius = 0
+font-0 = "DejaVuSansMono Nerd Font Mono:style=Book:size:14:antialias=true;3"
 
 
 modules-left = i3
-modules-center = xwindow
-modules-right = temperature backlight battery pulseaudio memory cpu date
+modules-center = date
+modules-right = 
 
 
 tray-position = right
-tray-padding = 5
-tray-background = ${colors.background}
+tray-padding = 10
+tray-detached = true
+tray-offset-x = -5
 wm-restack = i3
 override-redirect = true
 scroll-up = i3wm-wsnext
@@ -131,121 +85,46 @@ scroll-down = i3wm-wsprev
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[module/backlight]
-type = internal/backlight
-card = intel_backlight
-enable-scroll = true
-format-padding = 1
-format-prefix= " "
-format-foreground = ${colors.purple}
-
-[module/xwindow]
-label-foreground = ${colors.foreground}
-label-background = ${colors.bg}
-type = internal/xwindow
-label = " %title:0:80:...%"
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-mount-0 = /
-label-mounted = %mountpoint%%{F-}: %percentage_used%%
-label-mounted-background = ${colors.purple}
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
-
 [module/i3]
-format-background = ${colors.background}
 type = internal/i3
-format = <label-state> <label-mode>
-ws-icon-0 = 1;1
-ws-icon-1 = 2;2
-ws-icon-2 = 3;3
-ws-icon-3 = 4;4
-ws-icon-4 = 5;5
-ws-icon-5 = 6;6
-ws-icon-6 = 7;7
-ws-icon-7 = 8;8
-ws-icon-8 = 9;9
-ws-icon-9 = 10;10
+strip-wsnumbers = true
+index-sort = true
+label-mode = %mode%
+label-mode-padding = 2
 
+ws-icon-0 = 1;\uf015
+ws-icon-1 = 2;\uf120
+ws-icon-2 = 3;\uf269
+ws-icon-3 = 4;\uf07b
+ws-icon-4 = 5;\uf1bc
+ws-icon-5 = 6;\uf1b6;
+ws-icon-6 = 7;\uf2c6;
+ws-icon-7 = 8;\uf121;
+ws-icon-8 = 9;\uf392;
+ws-icon-default = \uf015
+
+;label-mode-background = #e60053
 ; focused
-label-focused = %icon%
-label-focused-foreground = ${colors.background}
-label-focused-background = ${colors.foreground}
-label-focused-padding = 2
+label-focused = %name%
+label-focused-background = ${colors.crust}
+label-focused-underline = ${colors.green}
+label-focused-padding = 1 
 ; unfocused
-label-unfocused = %icon%
-label-unfocused-foreground = ${colors.foreground}
-label-unfocused-background = ${colors.background}
-label-unfocused-padding = 2
+label-unfocused = %name%
+label-unfocused-background = ${colors.mantle}
+label-unfocused-padding = 1
 ; visible
-label-visible = %icon%
-label-visible-foreground = ${colors.foreground}
-label-visible-background = ${colors.background2}
-label-visible-padding = 2
-
-[module/mpd]
-type = internal/mpd
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song> <label-time>
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-label-song-maxlen = 25
-label-song-ellipsis = true
-icon-prev-padding-left = 2
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-background = ${colors.background}
-;format-prefix = " "
-;format-prefix-foreground = ${colors.foreground-alt}
-label = " %percentage:2%%"
-label-foreground = ${colors.aqua}
-format-padding = 1
-click-left = ~/.config/rofi/applets/menu/volume.sh &
-
-[module/memory]
-type              = internal/memory
-format-background = ${colors.foreground}
-format-foreground = ${colors.background}
-;label             = "%gb_used%/%gb_total%"
-label             =  %percentage_used%%
-label-background  = ${colors.background}
-label-foreground  = ${colors.yellow}
-;label-padding = 1
-
-[module/logo]
-type               = custom/text
-content-background = ${self.background}
-content-foreground = ${colors.foreground}
-content            = "woolsey/ "
-
-[module/eth]
-type = internal/network
-interface = enp24s0
-interval = 3.0
-
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-;format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+label-visible = %name%
+label-visible-underline = ${colors.mantle}
+label-visible-padding = 1
 
 [module/date]
 type = internal/date
 interval = 5
 
 ;date =
-date = " %Y-%m-%d"
+;date = " %Y-%m-%d"
+date = "%Y-%m-%d"
 ;date-alt = " %Y-%m-%d"
 
 time = %H:%M
@@ -254,92 +133,10 @@ time = %H:%M
 ;format-prefix = 
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
-label-foreground = ${colors.blue}
-label-background = ${colors.background}
+label-foreground = ${colors.text}
+;label-background = ${colors.background}
 label-padding = 0
 label = %date% %time%
-
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = vol:<label-volume>
-label-volume = %percentage%%
-format-volume-foreground = ${color.reud}
-format-background = ${color.background}
-format-volume-background = ${colors.background}
-format-volume-padding = 1
-label-muted = muted
-label-muted-foreground = ${colors.foreground}
-label-muted-background = ${colors.red}
-
-
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 100
-label-charging-foreground = ${colors.green}
-format-charging =  <label-charging>
-format-charging-underline = #ffb52a
-
-label-discharging-foreground = ${colors.orange}
-format-discharging =  <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
-
-label-full-foreground = ${colors.green}
-format-full-prefix = ""
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
-
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = P
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
@@ -351,6 +148,5 @@ screenchange-reload = true
 
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-bottom = 100
 

@@ -5,13 +5,13 @@ end
 function fish_user_key_bindings
   fish_vi_key_bindings
 end
-set -g theme_use_abbreviated_branch_name no
-set -g theme_title_use_abbreviated_path no
-set -g theme_title_display_path yes
-set -g theme_display_user yes
-set -g theme_display_hostname yes
-set -g theme_display_vi yes
-set -g theme_color_scheme gruvbox
+# set -g theme_use_abbreviated_branch_name no
+# set -g theme_title_use_abbreviated_path no
+# set -g theme_title_display_path yes
+# set -g theme_display_user yes
+# set -g theme_display_hostname yes
+# set -g theme_display_vi yes
+# set -g theme_color_scheme gruvbox
 # set -g theme_color_scheme bobthefish_colors
 # set theme_gruvbox dark medium
 
@@ -29,11 +29,14 @@ alias ckitty='lvim ~/.config/kitty/kitty.conf'
 alias sshh='rofi -show ssh'
 alias music='systemctl --user start mopidy.service'
 alias notes='cd ~/nextcloud/obsidian/ & lvim'
-alias bmon='xrandr --output DisplayPort-1 --right-of DisplayPort-0 --mode "3840x2160"'
+alias bmon='xrandr --output DisplayPort-1 --left-of DisplayPort-0 --mode "3840x2160"'
 alias pmon='xrandr --output DisplayPort-1 --mode "1920x1080"'
 alias lmon='xrandr --output DisplayPort-0 --left-of DisplayPort-1 --auto'
 alias rmoff='xrandr --output DisplayPort-1 --off'
 alias lmoff='xrandr --output DisplayPort-0 --off'
+
+starship init fish | source
+
 # # theme
     # # TokyoNight Color Palette
     # set -l foreground c0caf5
