@@ -5,27 +5,21 @@ end
 function fish_user_key_bindings
   fish_vi_key_bindings
 end
-set -g theme_use_abbreviated_branch_name no
-set -g theme_title_use_abbreviated_path no
-set -g theme_title_display_path yes
-set -g theme_display_user yes
-set -g theme_display_hostname yes
-set -g theme_display_vi yes
-set -g theme_color_scheme gruvbox
 # set -g theme_color_scheme bobthefish_colors
 # set theme_gruvbox dark medium
+theme_gruvbox dark soft
 
 
 # setup alias to manage dotfiles in git
 alias gii='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 # open configs
-alias vi='lvim'
-alias cfish='lvim ~/.config/fish/config.fish'
-alias ci3='lvim ~/.config/i3/config'
-alias cpoly='lvim ~/.config/polybar/config'
-alias cvim='lvim ~/.vimrc'
-alias ckitty='lvim ~/.config/kitty/kitty.conf'
+alias vi='nvim'
+alias cfish='nvim ~/.config/fish/config.fish'
+alias ci3='nvim ~/.config/i3/config'
+alias cpoly='nvim ~/.config/polybar/config'
+alias cvim='nvim ~/.vimrc'
+alias ckitty='nvim ~/.config/kitty/kitty.conf'
 alias sshh='rofi -show ssh'
 alias music='systemctl --user start mopidy.service'
 alias notes='cd ~/nextcloud/obsidian/ & lvim'
@@ -98,3 +92,5 @@ alias lmoff='xrandr --output DisplayPort-0 --off'
 #   set -x color_desk                     005faf cccccc --bold
 #   set -x color_nix                      005faf cccccc --bold
 # end
+
+starship init fish | source
