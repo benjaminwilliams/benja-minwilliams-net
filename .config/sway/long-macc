@@ -1,0 +1,30 @@
+set $bg0 #1c120d
+set $bg1 #261a15
+set $bg2 #372922
+set $bg3 #473b34
+set $bg4 #685c56
+
+set $fg0 #e6d2c8
+set $fg1 #cbad9f
+set $fg2 #ad9184
+set $fg3 #886859
+set $fg4 #6d4f41
+
+set $bg #1c120d
+set $fg #dcb6a4
+set $0 #090504
+set $1 #f0565b
+set $2 #7bc596
+set $3 #c2ad61
+set $4 #8199d9
+set $5 #9f80c2
+set $6 #8ec0cb
+set $7 #dacbc4
+set $8 #090504
+set $9 #f54147
+set $10 #6bd692
+set $11 #d6bb58
+set $12 #6384da
+set $13 #996acd
+set $14 #6ecadf
+set $15 #e2ae96
