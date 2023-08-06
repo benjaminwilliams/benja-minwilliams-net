@@ -7,7 +7,7 @@ function fish_user_key_bindings
 end
 # set -g theme_color_scheme bobthefish_colors
 # set theme_gruvbox dark medium
-theme_gruvbox dark soft
+# theme_gruvbox dark soft
 
 
 # setup alias to manage dotfiles in git
@@ -30,7 +30,7 @@ alias rmoff='xrandr --output DisplayPort-1 --off'
 alias lmoff='xrandr --output DisplayPort-0 --off'
 
 starship init fish | source
-
+neofetch
 # # theme
     # # TokyoNight Color Palette
     # set -l foreground c0caf5
