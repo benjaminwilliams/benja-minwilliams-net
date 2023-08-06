@@ -7,7 +7,7 @@ function fish_user_key_bindings
 end
 # set -g theme_color_scheme bobthefish_colors
 # set theme_gruvbox dark medium
-# theme_gruvbox dark soft
+#theme_gruvbox dark soft
 
 
 # setup alias to manage dotfiles in git
@@ -31,6 +31,40 @@ alias lmoff='xrandr --output DisplayPort-0 --off'
 
 starship init fish | source
 neofetch
+
+# Noctis Bordo
+    set -l foreground 312A2D
+    set -l selection 3C2F34
+    set -l comment 302629
+    set -l red D1789A
+    set -l orange C5663F
+    set -l yellow F6C38A
+    set -l green 7BE6AB
+    set -l purple 7060EB
+    set -l cyan 4CA1B3
+    set -l blue 64A1B3
+    set -l purple 7060EB
+
+    set -g fish_color_normal $foreground
+    set -g fish_color_command $cyan
+    set -g fish_color_keyword $pink
+    set -g fish_color_quote $yellow
+    set -g fish_color_redirection $foreground
+    set -g fish_color_end $orange
+    set -g fish_color_error $red
+    set -g fish_color_param $purple
+    set -g fish_color_comment $comment
+    set -g fish_color_selection --background=$selection
+    set -g fish_color_search_match --background=$selection
+    set -g fish_color_operator $green
+    set -g fish_color_escape $pink
+    set -g fish_color_autosuggestion $comment
+    
+    set -g fish_pager_color_progress $comment
+    set -g fish_pager_color_prefix $cyan
+    set -g fish_pager_color_completion $foreground
+    set -g fish_pager_color_description $comment
+
 # # theme
     # # TokyoNight Color Palette
     # set -l foreground c0caf5

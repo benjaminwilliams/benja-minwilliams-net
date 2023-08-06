@@ -1,0 +1,203 @@
+/* ==========================================================================
+   Rofi color theme
+
+   https://github.com/benjaminwilliams/long-macc
+
+   File: long-macc.rasi
+   Desc: Long Macc color theme for Rofi
+   Author: Ben Williams
+   Source: https://github.com/benjaminwilliams/long-macc
+   ========================================================================== */
+
+* {
+    /* Theme settings */
+    highlight: bold;
+    scrollbar: true;
+
+    /* long macc colours */
+    long-macc-bg0: #1c120d;
+    long-macc-bg1: #261a15;
+    long-macc-bg2: #372922;
+    long-macc-bg3: #473b34;
+    long-macc-bg4: #685c56;
+
+    long-macc-fg0: #e6d2c8;
+    long-macc-fg1: #cbad9f;
+    long-macc-fg2: #ad9184;
+    long-macc-fg3: #886859;
+    long-macc-fg4: #6d4f41;
+
+    long-macc-bg: #1c120d;
+    long-macc-fg: #dcb6a4;
+    long-macc-0: #090504;
+    long-macc-1: #f0565b;
+    long-macc-2: #7bc596;
+    long-macc-3: #c2ad61;
+    long-macc-4: #8199d9;
+    long-macc-5: #9f80c2;
+    long-macc-6: #8ec0cb;
+    long-macc-7: #dacbc4;
+    long-macc-8: #090504;
+    long-macc-9: #f54147;
+    long-macc-10: #6bd692;
+    long-macc-11: #d6bb58;
+    long-macc-12: #6384da;
+    long-macc-13: #996acd;
+    long-macc-14: #6ecadf;
+    long-macc-15: #e2ae96;
+
+
+    /* Theme colors */
+    background:                  @long-macc-bg;
+    background-color:            @background;
+    foreground:                  @long-macc-fg;
+    border-color:                @long-macc-fg4;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @long-macc-bg1;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @long-macc-bg3;
+    selected-normal-foreground:  @long-macc-fg;
+
+    active-background:           @long-macc-3;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @long-macc-11;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @long-macc-1;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @long-macc-9;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+
+window {
+    background-color: @background;
+    border:           2;
+    padding:          2;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+message {
+    border:       2px 0 0;
+    border-color: @separatorcolor;
+    padding:      1px;
+}
+
+textbox {
+    highlight:  @highlight;
+    text-color: @foreground;
+}
+
+listview {
+    border:       2px solid 0 0;
+    padding:      2px 0 0;
+    border-color: @separatorcolor;
+    spacing:      2px;
+    scrollbar:    @scrollbar;
+}
+
+element {
+    border:  0;
+    padding: 2px;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+scrollbar {
+    width:        4px;
+    border:       0;
+    handle-color: @scrollbar-handle;
+    handle-width: 8px;
+    padding:      0;
+}
+
+sidebar {
+    border:       2px 0 0;
+    border-color: @separatorcolor;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @normal-foreground;
+    margin:     0 0.3em 0 0;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
