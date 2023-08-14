@@ -14,12 +14,12 @@ end
 alias gii='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 # open configs
-alias vi='nvim'
-alias cfish='nvim ~/.config/fish/config.fish'
-alias ci3='nvim ~/.config/i3/config'
-alias cpoly='nvim ~/.config/polybar/config'
-alias cvim='nvim ~/.vimrc'
-alias ckitty='nvim ~/.config/kitty/kitty.conf'
+alias vi='vim'
+alias cfish='vim ~/.config/fish/config.fish'
+alias ci3='vim ~/.config/i3/config'
+alias cpoly='vim ~/.config/polybar/config'
+alias cvim='vim ~/.vimrc'
+alias ckitty='vim ~/.config/kitty/kitty.conf'
 alias sshh='rofi -show ssh'
 alias music='systemctl --user start mopidy.service'
 alias notes='cd ~/nextcloud/obsidian/ & lvim'
@@ -31,18 +31,18 @@ alias lmoff='xrandr --output DisplayPort-0 --off'
 
 starship init fish | source
 
-# Noctis Bordo
-    set -l foreground 312A2D
-    set -l selection 3C2F34
-    set -l comment 302629
-    set -l red D1789A
-    set -l orange C5663F
-    set -l yellow F6C38A
-    set -l green 7BE6AB
-    set -l purple 7060EB
-    set -l cyan 4CA1B3
-    set -l blue 64A1B3
-    set -l purple 7060EB
+# Long-macc
+    set -l foreground e6d2c8
+    set -l selection e6d2c8
+    set -l comment 886859
+    set -l red f0565b
+    set -l orange 7bc596
+    set -l yellow c2ad61
+    set -l green 8199d9
+    set -l purple 9f80c2
+    set -l cyan 8ec0cb
+    set -l blue 6384da
+    set -l purple 996acd
 
     set -g fish_color_normal $foreground
     set -g fish_color_command $cyan
