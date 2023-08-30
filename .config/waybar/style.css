@@ -1,0 +1,234 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+ @import "long-macc.css";
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+ @keyframes blink-warning {
+    70% {
+        color: white;
+    }
+
+    to {
+        color: white;
+        background-color: orange;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: white;
+    }
+
+    to {
+        color: white;
+        background-color: red;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: @bg;
+    color: @fg;
+    font-family: Cantarell, Noto Sans, sans-serif;
+    font-size: 14px;
+}
+
+/*
+window > box {
+    background-color: @bg2;
+    margin: 10px;
+}
+*/
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#wireplumber {
+    padding: 6px 10px 10px 10px;
+    background-color: @bg;
+    border-top: 4px solid @5;
+}
+#tray {
+    border-top: 4px solid @4;
+}
+#network {
+    border-top: 4px solid @3;
+}
+#memory {
+    border-top: 4px solid @2;
+}
+#cpu {
+    border-top: 4px solid @6;
+}
+#wireplumber {
+    border-top: 4px solid @1;
+}
+
+#workspaces {
+    background: @bg1;
+    color: @fg;
+    border-radius: 10px;
+    border-top: 4px solid transparent;
+}
+
+#workspaces button {
+    padding: 0 200px;
+
+}
+
+#workspaces button.active {
+    background: @bg2;
+    color: @fg0;
+    border-top: 4px solid @5;
+
+}
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: @11;
+}
+
+#battery.critical {
+    color: @9;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#cpu {
+  /* No styles */
+}
+
+#cpu.warning {
+    color: @11;
+}
+
+#cpu.critical {
+    color: @9;
+}
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#memory.warning {
+    color: @11;
+}
+
+#memory.critical {
+    color: @9;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#mode {
+    background: #64727D;
+    border-top: 2px solid white;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
+}
+
+#network {
+    /* No styles */
+}
+
+#network.disconnected {
+    color: @11;
+}
+
+#pulseaudio {
+    /* No styles */
+}
+
+#pulseaudio.muted {
+    /* No styles */
+}
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#temperature {
+    /* No styles */
+}
+
+#temperature.critical {
+    color: @9;
+}
+
+#tray {
+    /* No styles */
+}
+
+#window {
+    font-weight: bold;
+}
+
+#workspaces button {
+    border-top: 4px solid transparent;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: @fg4;
+}
+
+#workspaces button.focused {
+    border-color: @4;
+    color: @fg;
+    background-color: @bg3;
+}
+
+#workspaces button.urgent {
+    border-color: @2;
+    color: @15;
+}
