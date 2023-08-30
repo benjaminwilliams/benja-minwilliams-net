@@ -30,6 +30,7 @@ alias rmoff='xrandr --output DisplayPort-1 --off'
 alias lmoff='xrandr --output DisplayPort-0 --off'
 
 starship init fish | source
+neofetch
 
 # Long-macc
     set -l foreground e6d2c8
