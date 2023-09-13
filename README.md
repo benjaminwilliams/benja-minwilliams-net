@@ -1,14 +1,22 @@
 # dotfiles2022
 
-### Clean install guide
+## Clean install guide
 
-- Install Arch with Gnome
-- Install some basics
+Install on Arch, configs for
+- i3
+- Hyprland
+
+Can also install on Gnome or KDE or XFCE or whatever.
+
+## Terminal Emulator
+
 ````
-sudo pacman -S kitty vim btop fish firefox
+sudo pacman -S kitty fish starship neofetch
 ````
-- pull down this repo using a bare repo 
- ````
+
+## Install the dot files 
+
+````
  git clone --separate-git-dir=$HOME/.myconf git@github.com:benjaminwilliams/dotfiles2022.git $HOME/myconf-tmp
 
 cp -a myconf-tmp/. ~
@@ -20,7 +28,7 @@ alias gii='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 gii config status.showUntrackedFiles no
 
 ````
-- Yay
+## Install Yay
 
 ````
 pacman -S --needed git base-devel
@@ -28,11 +36,11 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 ````
-- LunarVim - https://www.lunarvim.org/docs/installation
-- fonts - `yay -S nerd-fonts-dejavu-complete`
-
-- Fish
+## Make Fish default shell
 ````
 sudo pacman -S fish
-sudo chsh -s /bin/fish
+chsh -s /bin/fish
 `````
+note, dont run `chsh` as sudo, you want to change shell for user, not root
+
+
