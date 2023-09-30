@@ -43,6 +43,12 @@ chsh -s /bin/fish
 `````
 note, dont run `chsh` as sudo, you want to change shell for user, not root
 
+## Font
+
+`````
+yay -S ttf-firacode-nerd
+`````
+
 ## i3-wm
 
 ````
