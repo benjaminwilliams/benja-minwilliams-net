@@ -49,6 +49,8 @@ note, dont run `chsh` as sudo, you want to change shell for user, not root
 yay -S ttf-firacode-nerd
 `````
 
+Use `kitty list-fonts` to check kitty can use the font, then update `.config/kitty/kitty.conf`
+
 ## i3-wm
 
 ````
