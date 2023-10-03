@@ -41,7 +41,7 @@ makepkg -si
 sudo pacman -S fish
 chsh -s /bin/fish
 `````
-note, dont run `chsh` as sudo, you want to change shell for user, not root
+Note: don't run `chsh` as sudo, you want to change shell for user, not root
 
 ## Font
 
@@ -56,4 +56,10 @@ Use `kitty list-fonts` to check kitty can use the font, then update `.config/kit
 ````
 sudo pacman -S i3-wm polybar rofi picom
 ````
+## Neovim (Lazy Vim)
 
+This repo now includes config for neovim, based on LazyVim. You should be able to just install neovim then open it.
+
+`sudo pacman -S neovim`
+
+It should install the plugins on first open. Refer to the [LazyVim documentation](https://lazyvim.github.io/installation) for more info.
