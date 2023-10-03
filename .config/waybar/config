@@ -141,6 +141,11 @@
         "spacing": 10
     },
 
+    "hyprland/window": {
+      "max-length": 200,
+      "separate-outputs": true
+    },
+
     "hyprland/workspaces": {
 	"format": "{name}",
 	},
