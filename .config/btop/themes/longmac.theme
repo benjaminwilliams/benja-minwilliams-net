@@ -1,8 +1,8 @@
 
-theme[main_bg]="#303446"
-theme[main_fg]="#C6D0F5"
-theme[title]="#C6D0F5"
-theme[hi_fg]="#8CAAEE"
+theme[main_bg]="#1c120d"
+theme[main_fg]="#e6d2c8"
+theme[title]="#e6d2c8"
+theme[hi_fg]="#6384da"
 theme[selected_bg]="#51576D"
 theme[selected_fg]="#8CAAEE"
 theme[inactive_fg]="#838BA7"
