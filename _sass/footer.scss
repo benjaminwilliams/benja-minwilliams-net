@@ -1,0 +1,23 @@
+@import "long-macc.scss";
+
+footer {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  bottom: 0;
+  padding: 0;
+  background-color: $macc-bg3;
+  color: $macc-fg0;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -10px;
+  span {
+    padding: 4px 10px;
+  }
+}
+
+.invert {
+  background-color: $macc-blue;
+  color: $macc-background;
+}
+

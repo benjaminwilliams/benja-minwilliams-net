@@ -1,0 +1,62 @@
+
+$font-family: 'VT323', monospace;
+$font-size-base: 1.6rem;
+
+body {
+  margin: 0 0 0 10px;
+  background-color: $macc-background;
+  color: $macc-foreground;
+  height: 100vh;
+  overflow: hidden;
+  background-image: radial-gradient(
+    rgba(55, 41, 34, 0.75), #1c120d 120%
+  );
+  height: 100vh;
+  text-shadow: 0 0 4px $macc-fg4;
+  font-family: $font-family;
+  font-size: $font-size-base;
+
+  &:after {
+   content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(55, 41, 34, 0.25),
+      rgba(55, 41, 34, 0.25) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+  }
+}
+
+
+h1, h2, h3, h4, h5 {
+  font-size: $font-size-base;
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  color: $macc-foreground;
+}
+
+pre, code {
+  white-space: pre;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  padding: 0;
+  margin: 0;
+}
+
+
+ul,li {
+  list-style-type: none;
+  list-style-position:inside;
+  margin:0;
+  padding:0;
+}
