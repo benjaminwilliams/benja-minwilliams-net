@@ -5,6 +5,7 @@ layout: default
 {{ content }}
 
 <ul>
+  [benja.minwilliams.net ~]$ ls -la <br>
   Home > Recent blog posts
   {% for post in site.posts %}
   <li> <code> -rw-r--r-- 1 ben ben    4096</code> {{ post.date | date: "%b %-d %Y" }} <a href="{{ post.url | relative_url }}">{{post.title}}</a></li>
