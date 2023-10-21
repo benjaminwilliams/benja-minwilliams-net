@@ -6,7 +6,7 @@ date: 2023-10-21
 lastmod: 2023-10-21
 ---
 
-Everyone loves a good rice. Theres something special about customising your desktop to look both cool and consitant. I'm a huge fan of muted retro vibes from [Gruvbox](https://github.com/morhetz/gruvbox) and the neon-pastel fun of [https://github.com/catppuccin/catppuccin]. They are both beatiful and look great on the front page of [r/unixporn](https://www.reddit.com/r/unixporn/).
+Everyone loves a good rice. Theres something special about customising your desktop to look both cool and consitant. I'm a huge fan of muted retro vibes from [Gruvbox](https://github.com/morhetz/gruvbox) and the neon-pastel fun of [Catppuccin](https://github.com/catppuccin/catppuccin). They are both beatiful and look great on the front page of [r/unixporn](https://www.reddit.com/r/unixporn/).
 
 **But that is the problem**
 
